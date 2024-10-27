@@ -17,6 +17,7 @@
                 </div>
             </div>
         </header>
+        
         <!-- About-->
         {{ with site.Data.homepage.about }}
         <section class="about-section text-center" id="about">
@@ -34,6 +35,7 @@
             </div>
         </section>
         {{ end }}
+ 
         <!-- Projects-->
         {{ with site.Data.homepage.projects }}
         <section class="projects-section bg-light" id="projects">
@@ -81,6 +83,25 @@
             </div>
         </section>
         {{ end }}
+
+        <!-- progresso-->
+        <br>
+        {{ with site.Data.homepage.progresso }}
+        <section class="progresso-section text-center" id="progresso">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-black mb-4">{{ .title }}</h2>
+                        <p class="text-black-50">{{ .desc }}</p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ .image }}" alt="..." />
+            </div>
+        </section>
+        <br>
+        <br>
+        {{ end }}
+
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
